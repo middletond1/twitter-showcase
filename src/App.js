@@ -1,5 +1,6 @@
 import './App.css';
-import Home from './home'
+import Home from './home';
+import Search from './search';
 
 export default function App() {
   return (
@@ -7,6 +8,7 @@ export default function App() {
       <header className="App-header">
       </header>
       <Home />
+      <Search />
     </div>
   );
 }
