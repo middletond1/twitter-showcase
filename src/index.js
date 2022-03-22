@@ -9,6 +9,8 @@ import {
  } from 'react-router-dom';
 import Home from './home';
 import Search from './search';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 ReactDOM.render(
   <BrowserRouter>
