@@ -1,19 +1,24 @@
 import React from "react";
 import './navbar.css'
-import { NavLink } from 'react-router-dom';
-import { LinkContainer } from "react-router-bootstrap";
-import Button from "react-bootstrap/Button";
 
-export default function Navbar() {
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+
+import { Link } from 'react-router-dom';
+
+export default function Navcomp() {
     return (
-        <nav className="Nav">
-            <h1>Navbar</h1>
-            <LinkContainer to='/home'>
-                <Button>Home</Button>
-            </LinkContainer>
-            <LinkContainer to='/search'>
-                <Button>Search</Button>
-            </LinkContainer>
-        </nav>
+        <Navbar bg="dark" variant="dark">
+            <Container fluid>
+                <Navbar.Brand as={Link} to='/home'>Navbar</Navbar.Brand>
+                <Nav className="ml-auto">
+                    <Nav.Link as={Link} to='/home'>Home</Nav.Link>
+                    <Nav.Link as={Link} to='/search'>Search</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
     )
 }
