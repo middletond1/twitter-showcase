@@ -7,8 +7,8 @@ import {
   Routes,
   Route,
  } from 'react-router-dom';
-import Home from './home';
-import Search from './search';
+import Home from './components/home';
+import Search from './components/search';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
