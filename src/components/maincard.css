@@ -1,0 +1,7 @@
+.card {
+    width: 600px;
+}
+
+.retweet-img, .heart-img {
+    height: 35px;
+}
