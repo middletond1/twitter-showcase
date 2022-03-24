@@ -9,10 +9,22 @@ export default function MainCard(props) {
     return (
         <div className="card">
             <header>
-                <img src={heartIco} className="prof-img" />
-                <h3 className="prof-name"></h3>
-                <h3 className="prof-screen-name"></h3>
-                <h3 className="post-time"></h3>
+            <Container>
+                    <Row>
+                        <Col className="col-2">
+                            <img src={heartIco} className="prof-img" />
+                        </Col>
+                        <Col className="col-4">
+                            <h5 className="prof-name">Dan Ryckert</h5>
+                        </Col>
+                        <Col className="col-4">
+                            <h5 className="prof-screen-name">@DanRyckert</h5>
+                        </Col>
+                        <Col className="col-2">
+                            <h3 className="post-time"></h3>
+                        </Col>
+                    </Row>
+                </Container>          
             </header>
             <main>
                 <p className="post-text"></p>
