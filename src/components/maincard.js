@@ -18,9 +18,9 @@ export default function MainCard(props) {
             </main>
             <footer>
                 <img src={retweetIco} className="retweet-img" />
-                <p className="retweet-count"></p>
+                <p className="retweet-count">250</p>
                 <img src={heartIco} className="heart-img" />
-                <p className="favorite-count"></p>
+                <p className="favorite-count">400</p>
             </footer>
         </div>
     )
