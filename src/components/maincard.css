@@ -2,6 +2,16 @@
     width: 600px;
 }
 
-.retweet-img, .heart-img {
-    height: 35px;
+.prof-img {
+    height: 75px;
 }
+
+.retweet-img, .heart-img {
+    height: 25px;
+}
+
+/* .card-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
