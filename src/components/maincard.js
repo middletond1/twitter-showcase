@@ -9,36 +9,36 @@ export default function MainCard(props) {
     return (
         <div className="card">
             <header>
-            <Container>
-                    <Row>
+                <Container>
+                    <Row className="mt-3">
                         <Col className="col-2">
-                            <img src={heartIco} className="prof-img" />
+                            <img src='http://pbs.twimg.com/profile_images/1478410389276745728/nD4Bb09L_normal.jpg' className="prof-img rounded-circle" />
                         </Col>
-                        <Col className="col-4">
+                        <Col className="col-3">
                             <h5 className="prof-name">Dan Ryckert</h5>
                         </Col>
-                        <Col className="col-4">
+                        <Col className="col-3">
                             <h5 className="prof-screen-name">@DanRyckert</h5>
                         </Col>
-                        <Col className="col-2">
-                            <h3 className="post-time"></h3>
+                        <Col className="col-4">
+                            <h5 className="post-time">8/1/2021 - 6:55pm</h5>
                         </Col>
                     </Row>
                 </Container>          
             </header>
-            <main>
+            <main className="card-body">
                 <p className="post-text"></p>
             </main>
             <footer className="card-footer">
                 <Container>
                     <Row>
-                        <Col className="">
+                        <Col className="text-end pe-0">
                             <img src={retweetIco} className="retweet-img" />
                         </Col>
                         <Col>
                             <p className="retweet-count mb-0">250</p>
                         </Col>
-                        <Col>
+                        <Col className="text-end pe-0">
                             <img src={heartIco} className="heart-img" />
                         </Col>
                         <Col>
