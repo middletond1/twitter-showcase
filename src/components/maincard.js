@@ -14,9 +14,9 @@ export default function MainCard(props) {
                 <p className="post-text"></p>
             </main>
             <footer>
-                <img src='../img/retweet.jpg' className="retweet-img" />
+                <img src='../img/retweet.png' className="retweet-img" />
                 <p className="retweet-count">{props.retweetCount}</p>
-                <img src='../img/heart.jpg' className="heart-img" />
+                <img src='../img/heart.png' className="heart-img" />
                 <p className="favorite-count">{props.favoriteCount}</p>
             </footer>
         </div>
