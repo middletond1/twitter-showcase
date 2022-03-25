@@ -10,18 +10,17 @@ export default function MainCard(props) {
         <div className="card">
             <header>
                 <Container>
-                    <Row className="mt-3">
-                        <Col className="col-2">
+                    <Row sm="auto" className="mt-3">
+                        <Col>
                             <img src='http://pbs.twimg.com/profile_images/1478410389276745728/nD4Bb09L_normal.jpg' className="prof-img rounded-circle" />
                         </Col>
-                        <Col className="col-3">
-                            <h5 className="prof-name">Dan Ryckert</h5>
+                        <Col className="p-0">
+                            <p className="prof-name m-0">Dan Ryckert ~ 8/1/2021 - 6:55pm</p>
+                            <p className="prof-screen-name m-0">@DanRyckert</p>
                         </Col>
-                        <Col className="col-3">
-                            <h5 className="prof-screen-name">@DanRyckert</h5>
+                        <Col>
                         </Col>
-                        <Col className="col-4">
-                            <h5 className="post-time">8/1/2021 - 6:55pm</h5>
+                        <Col>
                         </Col>
                     </Row>
                 </Container>          

@@ -5,7 +5,7 @@ import { Container, Row, Col, Form } from "react-bootstrap";
 export default function Search() {
     return (
         <div>
-            <Container>
+            <Container fluid="sm">
                 <Row>
                     <Col className="text-center my-5">
                         <h1>This is our search page. Check out this Card!</h1>
@@ -19,22 +19,22 @@ export default function Search() {
                         </Form.Group>
                     </Form>
                 </Row>
-                <Row className="m-3">
+                <Row className="mt-3">
                     <Col>
                         <MainCard />
                     </Col>
                 </Row>
-                <Row className="m-3">
+                <Row className="mt-3">
                     <Col>
                         <MainCard />
                     </Col>
                 </Row>
-                <Row className="m-3">
+                <Row className="mt-3">
                     <Col>
                         <MainCard />
                     </Col>
                 </Row>
-                <Row className="m-3">
+                <Row className="mt-3">
                     <Col>
                         <MainCard />
                     </Col>
