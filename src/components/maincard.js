@@ -15,7 +15,7 @@ export default function MainCard(props) {
                             <img src='http://pbs.twimg.com/profile_images/1478410389276745728/nD4Bb09L_normal.jpg' className="prof-img rounded-circle" />
                         </Col>
                         <Col className="p-0">
-                            <p className="prof-name m-0">Dan Ryckert ~ 8/1/2021 - 6:55pm</p>
+                            <p className="prof-name m-0">Dan Ryckert · 8/1/2021 - 6:55pm</p>
                             <p className="prof-screen-name m-0">@DanRyckert</p>
                         </Col>
                         <Col>
