@@ -12,8 +12,9 @@ export default function Navcomp() {
             <Container fluid>
                 <Navbar.Brand as={Link} to='/home'>Navbar</Navbar.Brand>
                 <Nav className="ml-auto">
-                    <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-                    <Nav.Link as={Link} to='/search'>Search</Nav.Link>
+                    <Nav.Link as={Link} to='/home' className="me-3">Home</Nav.Link>
+                    <Nav.Link as={Link} to='/search' className="me-3">Search</Nav.Link>
+                    <Nav.Link as={Link} to='/random' className="me-3">Random</Nav.Link>
                 </Nav>
             </Container>
         </Navbar>

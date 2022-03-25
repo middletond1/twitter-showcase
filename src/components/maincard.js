@@ -27,7 +27,7 @@ export default function MainCard(props) {
                 </Container>          
             </header>
             <main className="card-body">
-                <p className="post-text"></p>
+                <p className="post-text">Here is some content posted by the creator. Neato Burrito!</p>
             </main>
             <footer className="card-footer">
                 <Container>

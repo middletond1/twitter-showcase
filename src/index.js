@@ -9,6 +9,7 @@ import {
  } from 'react-router-dom';
 import Home from './components/home';
 import Search from './components/search';
+import Random from './components/random';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -18,6 +19,7 @@ ReactDOM.render(
       <Route path='/' element={<App />}>
         <Route path='home' element={<Home />} />
         <Route path='search' element={<Search />} />
+        <Route path='random' element={<Random />} />
         <Route path="*" element={<p>There's nothing here!</p>}/>
       </Route>
     </Routes>
