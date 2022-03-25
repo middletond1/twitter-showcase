@@ -1,21 +1,26 @@
 import React from "react";
 import MainCard from "./maincard";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Button, ButtonGroup } from "react-bootstrap";
 
 export default function Search() {
     return (
         <div>
-            <Container fluid="sm" >
+            <Container fluid="sm">
                 <Row>
                     <Col className="text-center my-5">
-                        <h1>This is our search page. Check out these Cards!</h1>
+                        <h1>Search Twitter</h1>
                     </Col>
                 </Row>
                 <Row className="w-50 mx-auto">
-                    <Form>
-                        <Form.Group>
-                            <Form.Label>Enter Twitter User</Form.Label>
-                            <Form.Control type="text" placeholder="Search..."/>
+                    <Form className="d-flex">
+                        <Form.Group className="flex-grow-1">
+                            <Form.Control type="text" placeholder="Search by User or Content"/>
+                        </Form.Group>
+                        <Form.Group controlId="formButton" className="">
+                            <Button variant="secondary">User</Button>
+                        </Form.Group>
+                        <Form.Group controlId="formButton" className="">
+                            <Button variant="secondary">Content</Button>
                         </Form.Group>
                     </Form>
                 </Row>
