@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 export default function Navcomp() {
     return (
-        <Navbar bg="dark" variant="dark">
+        <Navbar bg="secondary" variant="dark">
             <Container fluid>
                 <Navbar.Brand as={Link} to='/home'><img style={{height: '50px'}} src={messageimg} /></Navbar.Brand>
                 <Nav className="ml-auto">
