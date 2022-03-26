@@ -20,7 +20,7 @@ export default function App() {
           <div className='content'>
             <Routes>
                 <Route path='home' element={<Home />} />
-                <Route path='search' element={<Search />} />
+                <Route path='search' element={<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>} />
                 <Route path='random' element={<Random />} />
                 <Route path="*" element={<p>There's nothing here!</p>}/>
             </Routes>
