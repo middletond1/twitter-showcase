@@ -13,6 +13,8 @@ export default function App() {
   
   const [searchTerm, setSearchTerm] = useState([]);
 
+  console.log(searchTerm);
+
   return (
     <Router>
       <div className="app">
@@ -20,7 +22,7 @@ export default function App() {
           <div className='content'>
             <Routes>
                 <Route path='home' element={<Home />} />
-                <Route path='search' element={<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>} />
+                <Route path='search' element={<Search setSearchTerm={setSearchTerm}/>} />
                 <Route path='random' element={<Random />} />
                 <Route path="*" element={<p>There's nothing here!</p>}/>
             </Routes>
