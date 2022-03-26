@@ -4,7 +4,7 @@ import retweetIco from "../img/retweet.png";
 import './maincard.css';
 import { Container, Row, Col } from "react-bootstrap";
 
-export default function MainCard(props) {
+export default function TweetCard() {
     
     return (
         <div className="card">

@@ -1,8 +1,8 @@
 import React from "react";
-import MainCard from "./maincard";
+import TweetCard from "./tweetcard";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-export default function Search({ setSearchTerm }) {
+export default function Search({ setSearchTerm, mockData }) {
     return (
         <div>
             <Container fluid="sm">
@@ -26,24 +26,17 @@ export default function Search({ setSearchTerm }) {
                 </Row>
                 <Row className="mt-3 w-50 mx-auto">
                     <Col>
-                        <MainCard />
+                        <TweetCard />
                     </Col>
                 </Row>
-                <Row className="mt-3 w-50 mx-auto">
-                    <Col>
-                        <MainCard />
-                    </Col>
-                </Row>
-                <Row className="mt-3 w-50 mx-auto">
-                    <Col>
-                        <MainCard />
-                    </Col>
-                </Row>
-                <Row className="mt-3 w-50 mx-auto">
-                    <Col>
-                        <MainCard />
-                    </Col>
-                </Row>
+                {/* {mockData.map((item) => {
+                    <Row className="mt-3 w-50 mx-auto">
+                        <Col>
+                            <TweetCard />
+                        </Col>
+                    </Row>
+                })
+                } */}
             </Container>
         </div>
     )

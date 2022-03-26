@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import Home from './components/home';
-import Search from './components/search';
-import Random from './components/random';
-import NavComponent from './components/navbar';
+
 import { 
   BrowserRouter as Router,
   Route,
   Routes
  } from 'react-router-dom';
+
+
+import Home from './components/home';
+import Search from './components/search';
+import Random from './components/random';
+import mockData from './mockdata';
+import NavComponent from './components/navbar';
 
 export default function App() {
   
@@ -22,7 +26,7 @@ export default function App() {
           <div className='content'>
             <Routes>
                 <Route path='home' element={<Home />} />
-                <Route path='search' element={<Search setSearchTerm={setSearchTerm}/>} />
+                <Route path='search' element={<Search setSearchTerm={setSearchTerm} tweetData={mockData}/>} />
                 <Route path='random' element={<Random />} />
                 <Route path="*" element={<p>There's nothing here!</p>}/>
             </Routes>
