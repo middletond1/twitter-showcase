@@ -18,10 +18,6 @@ export default function MainCard(props) {
                             <p className="prof-name m-0">Dan Ryckert · 8/1/2021 - 6:55pm</p>
                             <p className="prof-screen-name m-0">@DanRyckert</p>
                         </Col>
-                        <Col>
-                        </Col>
-                        <Col>
-                        </Col>
                     </Row>
                 </Container>          
             </header>
@@ -49,10 +45,3 @@ export default function MainCard(props) {
         </div>
     )
 }
-
-// {`${props.img}`}
-// {props.name}
-// {props.screenName}
-// {props.time}
-// {props.retweetCount}
-// {props.favoriteCount}
