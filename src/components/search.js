@@ -33,21 +33,21 @@ export default function Search({ setSearchTerm, tweetData }) {
                     </Col>
                 </Row>
                 {tweetData.statuses.map((item, i) => {
-                    return (
-                        <Row className="mt-3 w-50 mx-auto">
-                            <Col>
-                                <TweetCard 
-                                    profilePic={item.user.profile_image_url}
-                                    userName={item.user.name}
-                                    screenName={item.user.screen_name}
-                                    tweetText={item.text}
-                                    retweetCount={item.retweet_count}
-                                    favoriteCount={item.favorite_count}
-                                />
-                            </Col>
-                        </Row>
-                    )   
-                })
+                        return (
+                            <Row className="mt-3 w-50 mx-auto">
+                                <Col>
+                                    <TweetCard 
+                                        profilePic={item.user.profile_image_url}
+                                        userName={item.user.name}
+                                        screenName={item.user.screen_name}
+                                        tweetText={item.text}
+                                        retweetCount={item.retweet_count}
+                                        favoriteCount={item.favorite_count}
+                                    />
+                                </Col>
+                            </Row>
+                        )   
+                    })
                 }
             </Container>
         </div>
