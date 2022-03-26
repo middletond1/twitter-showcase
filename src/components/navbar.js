@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 import { Link } from 'react-router-dom';
 
-export default function Navcomp() {
+export default function NavComponent() {
     return (
         <Navbar bg="secondary" variant="dark">
             <Container fluid>
