@@ -14,15 +14,24 @@ export default function SearchPage({ setSearchTerm, tweetData }) {
             <Container fluid="sm" className="mt-5">
                 {tweetData.statuses.map((item, i) => {
 
-                    let photos = ""
+                    let photos;
+                    let video;
 
-                    if(item.entities.hasOwnProperty('media')) {
-                        photos = item.entities.media.map(media => {
-                            return media.media_url
-                        })
+                    if(item.hasOwnProperty('extended_entities')) {
+                        item.extended_entities.media.map(media => {
+                            if(media.type === "photo") {
+                                photos = item.extended_entities.media.map(media => {
+                                    return media.media_url
+                                })
+                            } 
+                            if(media.type === "video") {
+                                item.extended_entities.media.map(media => {
+                                    video = media.video_info.variants.pop().url
+                                })
+                            }
+                        })            
                     }
                     
-
                     return (
                         <Row className="mt-3 w-50 mx-auto">
                             <Col>
@@ -35,7 +44,7 @@ export default function SearchPage({ setSearchTerm, tweetData }) {
                                     retweetCount={item.retweet_count}
                                     favoriteCount={item.favorite_count}
                                     photo={photos}
-                                    // video={}
+                                    video={video}
                                     // gif={}
                                 />
                             </Col>
