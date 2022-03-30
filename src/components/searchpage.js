@@ -10,8 +10,8 @@ export default function SearchPage({ setSearchTerm, tweetData }) {
 
     return (
         <div>
-            <Container fluid="sm">
-                <SearchBar setSearchTerm={ setSearchTerm }/>
+            <SearchBar setSearchTerm={ setSearchTerm }/>
+            <Container fluid="sm" className="mt-5">
                 {tweetData.statuses.map((item, i) => {
                         return (
                             <Row className="mt-3 w-50 mx-auto">
