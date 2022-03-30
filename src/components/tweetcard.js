@@ -4,8 +4,12 @@ import retweetIco from "../img/retweet.png";
 import './maincard.css';
 import { Container, Row, Col } from "react-bootstrap";
 
-export default function TweetCard({ profilePic, userName, screenName, tweetText, retweetCount, favoriteCount}) {
+export default function TweetCard({ date, profilePic, userName, screenName, tweetText, retweetCount, favoriteCount}) {
     
+    function createDate(dateInfo) {
+        return `${dateInfo.slice(4, 10)}, ${dateInfo.slice(26, 30)}`
+    }
+
     return (
         <div className="card">
             <header>
@@ -15,7 +19,7 @@ export default function TweetCard({ profilePic, userName, screenName, tweetText,
                             <img src={profilePic} className="prof-img rounded-circle" />
                         </Col>
                         <Col className="p-0">
-                            <p className="prof-name m-0">{userName}</p>
+                            <p className="prof-name m-0 fw-bold">{userName} · {createDate(date)}</p>
                             <p className="prof-screen-name m-0">@{screenName}</p>
                         </Col>
                     </Row>

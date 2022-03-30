@@ -16,7 +16,8 @@ export default function SearchPage({ setSearchTerm, tweetData }) {
                         return (
                             <Row className="mt-3 w-50 mx-auto">
                                 <Col>
-                                    <TweetCard 
+                                    <TweetCard
+                                        date ={item.created_at}
                                         profilePic={item.user.profile_image_url}
                                         userName={item.user.name}
                                         screenName={item.user.screen_name}
