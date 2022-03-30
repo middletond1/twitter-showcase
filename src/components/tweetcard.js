@@ -4,11 +4,13 @@ import retweetIco from "../img/retweet.png";
 import './maincard.css';
 import { Container, Row, Col } from "react-bootstrap";
 
-export default function TweetCard({ date, profilePic, userName, screenName, tweetText, retweetCount, favoriteCount}) {
+export default function TweetCard({ date, profilePic, userName, screenName, tweetText, retweetCount, favoriteCount, photo, video, gif}) {
     
     function createDate(dateInfo) {
         return `${dateInfo.slice(4, 10)}, ${dateInfo.slice(26, 30)}`
     }
+
+    // console.log(photo)
 
     return (
         <div className="card">
@@ -27,6 +29,7 @@ export default function TweetCard({ date, profilePic, userName, screenName, twee
             </header>
             <main className="card-body">
                 <p className="post-text">{tweetText}</p>
+                <img src={photo} className="img-fluid"/>
             </main>
             <footer className="card-footer">
                 <Container>
