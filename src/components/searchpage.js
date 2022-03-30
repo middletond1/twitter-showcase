@@ -2,7 +2,7 @@ import React from "react";
 import TweetCard from "./tweetcard";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-export default function Search({ setSearchTerm, tweetData }) {
+export default function SearchPage({ setSearchTerm, tweetData }) {
 
     console.log(tweetData)
 
@@ -26,11 +26,6 @@ export default function Search({ setSearchTerm, tweetData }) {
                             <Button variant="secondary">Content</Button>
                         </Form.Group>
                     </Form>
-                </Row>
-                <Row className="mt-3 w-50 mx-auto">
-                    <Col>
-                        <TweetCard />
-                    </Col>
                 </Row>
                 {tweetData.statuses.map((item, i) => {
                         return (

@@ -8,7 +8,7 @@ import {
 
 
 import Home from './components/home';
-import Search from './components/search';
+import SearchPage from './components/searchpage';
 import Random from './components/random';
 import mockData from './mockdata';
 import NavComponent from './components/navbar';
@@ -26,7 +26,7 @@ export default function App() {
           <div className='content'>
             <Routes>
                 <Route path='home' element={<Home />} />
-                <Route path='search' element={<Search setSearchTerm={setSearchTerm} tweetData={mockData}/>} />
+                <Route path='search' element={<SearchPage setSearchTerm={setSearchTerm} tweetData={mockData}/>} />
                 <Route path='random' element={<Random />} />
                 <Route path="*" element={<p>There's nothing here!</p>}/>
             </Routes>
