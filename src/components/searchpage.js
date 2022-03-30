@@ -1,6 +1,6 @@
 import React from "react";
 import TweetCard from "./tweetcard";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import SearchBar from "./searchbar";
 
