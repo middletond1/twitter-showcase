@@ -29,7 +29,7 @@ export default function SearchPage({ setSearchTerm, tweetData }) {
                                     media.video_info.variants.map(variant => {
                                         if(variant.bitrate === 2176000) {
                                             video = variant.url
-                                        }
+                                        }                                          
                                     })
                                 })
                             }

@@ -10,8 +10,8 @@ export default function TweetCard({ date, profilePic, userName, screenName, twee
         return `${dateInfo.slice(4, 10)}, ${dateInfo.slice(26, 30)}`
     }
 
-    console.log(photo)
-    console.log(video)
+    // console.log(photo)
+    // console.log(video)
 
     return (
         <div className="card">
@@ -32,8 +32,8 @@ export default function TweetCard({ date, profilePic, userName, screenName, twee
                 <p className="post-text">{tweetText}</p>
                 <img src={photo} className="img-fluid"/>
                 {video && 
-                    <div class="ratio ratio-16x9">
-                        <iframe src={video} allowfullscreen></iframe>
+                    <div className="ratio ratio-16x9">
+                        <iframe src={video} allowFullScreen></iframe>
                     </div>
                 }
             </main>
