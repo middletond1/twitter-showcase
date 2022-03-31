@@ -31,9 +31,11 @@ export default function TweetCard({ date, profilePic, userName, screenName, twee
             <main className="card-body">
                 <p className="post-text">{tweetText}</p>
                 <img src={photo} className="img-fluid"/>
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src={video} allowfullscreen></iframe>
-                </div>
+                {video && 
+                    <div class="ratio ratio-16x9">
+                        <iframe src={video} allowfullscreen></iframe>
+                    </div>
+                }
             </main>
             <footer className="card-footer">
                 <Container>

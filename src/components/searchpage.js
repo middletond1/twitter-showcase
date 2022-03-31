@@ -26,7 +26,11 @@ export default function SearchPage({ setSearchTerm, tweetData }) {
                             } 
                             if(media.type === "video") {
                                 item.extended_entities.media.map(media => {
-                                    video = media.video_info.variants.pop().url
+                                    media.video_info.variants.map(variant => {
+                                        if(variant.bitrate === 2176000) {
+                                            video = variant.url
+                                        }
+                                    })
                                 })
                             }
                         })            
