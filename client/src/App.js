@@ -23,12 +23,12 @@ export default function App() {
     <Router>
       <div className="app">
         <NavComponent />
-          <div className='content'>
+          <div className='content h-100'>
             <Routes>
                 <Route path='home' element={<Home />} />
                 <Route path='search' element={<SearchPage setSearchTerm={setSearchTerm} tweetData={mockData}/>} />
                 <Route path='random' element={<Random />} />
-                <Route path="*" element={<p>There's nothing here!</p>}/>
+                <Route path="*" element={<Home />} />
             </Routes>
           </div>
       </div>
