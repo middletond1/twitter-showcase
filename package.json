@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "npm run build --prefix client",
-    "heroku-postbuild": "npm i --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "npm i && npm i --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/middletond1/twitter-showcase#readme",
   "dependencies": {
+    "axios": "^0.26.1",
     "express": "^4.17.3"
   }
 }
