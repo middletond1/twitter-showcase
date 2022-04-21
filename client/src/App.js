@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 import { 
   BrowserRouter as Router,
@@ -16,6 +17,14 @@ import NavComponent from './components/navbar';
 export default function App() {
   
   const [searchTerm, setSearchTerm] = useState([]);
+
+  React.useEffect(() => {
+    const fetchTwitterAPI = async() => {
+      const response = await axios.get('/api/twitter')
+      console.log(response);
+    }
+    fetchTwitterAPI();
+  }, [])
 
   console.log(searchTerm);
 

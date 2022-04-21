@@ -11,8 +11,11 @@ const app = express();
 app.use(express.static(path.resolve(__dirname, './client/build')));
 
 // Handle GET requests to /api route
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from server!" });
+app.get("/api/twitter", (req, res) => {
+  axios.get(`https://api.twitter.com/1.1/search/tweets.json?q=from:danryckert`)
+  .then(response => {
+    res.send(response.data);
+  });
 });
 
 // All other GET requests not handled before will return our React app
@@ -26,14 +29,7 @@ app.get('*', (req, res) => {
 //     console.log(res.data)
 //   })
 
-axios.get(`https://api.twitter.com/1.1/search/tweets.json?q=from:danryckert`)
-  .then(res => {
-    console.log(res);
-    console.log(res.data)
-  });
-
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
 
-// runs heroku build
