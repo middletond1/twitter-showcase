@@ -12,9 +12,14 @@ app.use(express.static(path.resolve(__dirname, './client/build')));
 
 // Handle GET requests to /api route
 app.get("/api/twitter", (req, res) => {
-  axios.get(`https://api.twitter.com/1.1/search/tweets.json?q=from:danryckert`)
-  .then(response => {
-    res.send(response.data);
+  const options = {
+    method: 'GET',
+    url: 'https://api.twitter.com/1.1/search/tweets.json',
+    params:{q:'from:danryckert'}
+  }
+  axios.request(options)
+    .then(response => {
+      res.send(response.data);
   });
 });
 
