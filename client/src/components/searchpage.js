@@ -4,18 +4,19 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import SearchBar from "./searchbar";
 
-export default function SearchPage({ setSearchTerm, tweetData }) {
+export default function SearchPage({ setSearchTerm, twitterData }) {
 
-    // console.log(tweetData)
+    // console.log(twitterData)
 
     return (
         <div>
             <SearchBar setSearchTerm={ setSearchTerm }/>
             <Container fluid="sm" className="mt-5">
-                {tweetData.statuses.map((item, i) => {
+                {twitterData.map((item, i) => {
 
                     let photos;
                     let video;
+                    // let gif;
 
                     if(item.hasOwnProperty('extended_entities')) {
                         item.extended_entities.media.map(media => {
@@ -33,6 +34,15 @@ export default function SearchPage({ setSearchTerm, tweetData }) {
                                     })
                                 })
                             }
+                            // if(media.type === "animated_gif") {
+                            //     item.extended_entities.media.map(media => {
+                            //         media.video_info.variants.map(variant => {
+                            //             if(variant.bitrate === 2176000) {
+                            //                 video = variant.url
+                            //             }                                          
+                            //         })
+                            //     })
+                            // }
                         })            
                     }
                     

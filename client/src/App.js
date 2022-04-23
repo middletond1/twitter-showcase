@@ -17,11 +17,13 @@ import NavComponent from './components/navbar';
 export default function App() {
   
   const [searchTerm, setSearchTerm] = useState([]);
+  const [twitterData, setTwitterData] = useState([]);
 
   React.useEffect(() => {
     const fetchTwitterAPI = async() => {
       const response = await axios.get('/api/twitter')
-      console.log(response);
+      console.log(response.data);
+      setTwitterData(response.data.statuses);
     }
     fetchTwitterAPI();
   }, [])
@@ -35,7 +37,7 @@ export default function App() {
           <div className='content h-100'>
             <Routes>
                 <Route path='home' element={<Home />} />
-                <Route path='search' element={<SearchPage setSearchTerm={setSearchTerm} tweetData={mockData}/>} />
+                <Route path='search' element={<SearchPage setSearchTerm={setSearchTerm} twitterData={twitterData}/>} />
                 <Route path='random' element={<Random />} />
                 <Route path="*" element={<Home />} />
             </Routes>
