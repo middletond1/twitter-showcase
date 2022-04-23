@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, Row, Col, Form, Button } from "react-bootstrap"
 
-export default function SearchBar({ setSearchTerm }) {
+export default function SearchBar({ setSearchTerm, searchTerm, setSearchUser }) {
     return (
         <div className="bg-secondary pb-5">
             <Container>
@@ -16,12 +16,8 @@ export default function SearchBar({ setSearchTerm }) {
                         <Form.Group className="flex-grow-1">
                             <Form.Control type="text" onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search by User or Content"/>
                         </Form.Group>
-                        <Form.Group controlId="formButton" className="">
-                            <Button variant="dark">User</Button>
-                        </Form.Group>
-                        <Form.Group controlId="formButton" className="">
-                            <Button variant="dark">Content</Button>
-                        </Form.Group>
+                        <Button onClick={() => setSearchUser(searchTerm)} value="user" variant="dark">User</Button>
+                        <Button variant="dark">Content</Button>
                     </Form>
                 </Row>
             </Container>

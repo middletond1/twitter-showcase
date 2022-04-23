@@ -16,15 +16,14 @@ import NavComponent from './components/navbar';
 export default function App() {
   
   const [searchTerm, setSearchTerm] = useState([]);
+  const [searchUser, setSearchUser] = useState([]);
   const [twitterData, setTwitterData] = useState([]);
-
-  let fromUser = 'from:mmahardy'
 
   React.useEffect(() => {
     const options = {
       method: 'GET',
       url: '/api/twitter',
-      params: {q: fromUser}
+      params: {q: `from:${searchTerm}`}
     }
     const fetchTwitterAPI = async() => {
       const response = await axios.request(options)
@@ -32,7 +31,7 @@ export default function App() {
       setTwitterData(response.data.statuses);
     }
     fetchTwitterAPI();
-  }, [])
+  }, [searchTerm])
 
   console.log(searchTerm);
 
@@ -43,7 +42,7 @@ export default function App() {
           <div className='content h-100'>
             <Routes>
                 <Route path='home' element={<Home />} />
-                <Route path='search' element={<SearchPage setSearchTerm={setSearchTerm} twitterData={twitterData}/>} />
+                <Route path='search' element={<SearchPage setSearchTerm={setSearchTerm} searchTerm={searchTerm} setSearchUser={setSearchUser} twitterData={twitterData}/>} />
                 <Route path='random' element={<Random />} />
                 <Route path="*" element={<Home />} />
             </Routes>
