@@ -12,10 +12,11 @@ app.use(express.static(path.resolve(__dirname, './client/build')));
 
 // Handle GET requests to /api route
 app.get("/api/twitter", (req, res) => {
+  const query = req.query.q
   const options = {
     method: 'GET',
     url: 'https://api.twitter.com/1.1/search/tweets.json',
-    params:{q:'from:danryckert'}
+    params:{q:`${query}`}
   }
   axios.request(options)
     .then(response => {

@@ -11,7 +11,6 @@ import {
 import Home from './components/home';
 import SearchPage from './components/searchpage';
 import Random from './components/random';
-import mockData from './mockdata';
 import NavComponent from './components/navbar';
 
 export default function App() {
@@ -19,9 +18,16 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState([]);
   const [twitterData, setTwitterData] = useState([]);
 
+  let fromUser = 'from:mmahardy'
+
   React.useEffect(() => {
+    const options = {
+      method: 'GET',
+      url: '/api/twitter',
+      params: {q: fromUser}
+    }
     const fetchTwitterAPI = async() => {
-      const response = await axios.get('/api/twitter')
+      const response = await axios.request(options)
       console.log(response.data);
       setTwitterData(response.data.statuses);
     }
