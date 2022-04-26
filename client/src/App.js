@@ -7,6 +7,8 @@ import {
   Routes
  } from 'react-router-dom';
 
+ import { Button } from "react-bootstrap"
+
 
 import Home from './components/home';
 import SearchPage from './components/searchpage';
@@ -15,7 +17,6 @@ import NavComponent from './components/navbar';
 
 export default function App() {
   
-  const [searchTerm, setSearchTerm] = useState([]);
   const [searchUser, setSearchUser] = useState([]);
   const [twitterData, setTwitterData] = useState([]);
 
@@ -23,7 +24,7 @@ export default function App() {
     const options = {
       method: 'GET',
       url: '/api/twitter',
-      params: {q: `from:${searchTerm}`}
+      params: {q: `from:${searchUser}`}
     }
     const fetchTwitterAPI = async() => {
       const response = await axios.request(options)
@@ -31,9 +32,9 @@ export default function App() {
       setTwitterData(response.data.statuses);
     }
     fetchTwitterAPI();
-  }, [searchTerm])
+  }, [searchUser])
 
-  console.log(searchTerm);
+  console.log(`this is the search user! ${searchUser}`);
 
   return (
     <Router>
@@ -42,7 +43,7 @@ export default function App() {
           <div className='content h-100'>
             <Routes>
                 <Route path='home' element={<Home />} />
-                <Route path='search' element={<SearchPage setSearchTerm={setSearchTerm} searchTerm={searchTerm} setSearchUser={setSearchUser} twitterData={twitterData}/>} />
+                <Route path='search' element={<SearchPage setSearchUser={setSearchUser} twitterData={twitterData}/>} />
                 <Route path='random' element={<Random />} />
                 <Route path="*" element={<Home />} />
             </Routes>

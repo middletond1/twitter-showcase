@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Container, Row, Col, Form, Button } from "react-bootstrap"
 
-export default function SearchBar({ setSearchTerm, searchTerm, setSearchUser }) {
+export default function SearchBar({ setSearchUser }) {
+
+    const [searchTerm, setSearchTerm] = useState([]);
+    console.log(`this is the search term! ${searchTerm}`);
+
     return (
         <div className="bg-secondary pb-5">
             <Container>

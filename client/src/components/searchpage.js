@@ -4,13 +4,13 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import SearchBar from "./searchbar";
 
-export default function SearchPage({ setSearchTerm, twitterData }) {
+export default function SearchPage({ setSearchUser, twitterData }) {
 
     // console.log(twitterData)
 
     return (
         <div>
-            <SearchBar setSearchTerm={ setSearchTerm }/>
+            <SearchBar setSearchUser={ setSearchUser }/>
             <Container fluid="sm" className="mt-5">
                 {twitterData.map((item, i) => {
 
