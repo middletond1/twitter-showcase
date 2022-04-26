@@ -7,8 +7,6 @@ import {
   Routes
  } from 'react-router-dom';
 
- import { Button } from "react-bootstrap"
-
 
 import Home from './components/home';
 import SearchPage from './components/searchpage';
